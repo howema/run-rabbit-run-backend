@@ -1,0 +1,2 @@
+class ExperienceTag < ApplicationRecord
+end
