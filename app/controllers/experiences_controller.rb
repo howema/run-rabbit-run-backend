@@ -28,4 +28,10 @@ class ExperiencesController < ApplicationController
     experience.save
     render json: experience.as_json
   end
+
+  def destroy
+    experience = Experience.find_by(id: params[:id])
+    experience.destroy
+    render json: { message: "It's gone now. Either you achieved it or you gave up. Congrats!" }
+  end
 end
