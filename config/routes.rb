@@ -16,4 +16,8 @@ Rails.application.routes.draw do
   patch "/users/:id" => "users#update"
 
   post "/sessions" => "sessions#create"
+
+  get "/experience-tags" => "experience_tags#index"
+
+  get "/experience-tags/:id" => "experience_tags#show"
 end
