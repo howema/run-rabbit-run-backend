@@ -13,12 +13,12 @@ experience = Experience.create!(title: "Pick grapes for a living", subtasks: "..
 experience = Experience.create!(title: "Get a software engineering job", subtasks: "...", notes: "...")
 experience = Experience.create!(title: "See the northern lights", subtasks: "...", notes: "...")
 
-tag = Tag.create!(type: "Just An Idea")
-tag = Tag.create!(type: "Face Your Fears")
-tag = Tag.create!(type: "Life Milestones")
-tag = Tag.create!(type: "Travel")
-tag = Tag.create!(type: "Especially Weird")
-tag = Tag.create!(type: "Nothing to It")
+tag = Tag.create!(name: "Just An Idea")
+tag = Tag.create!(name: "Face Your Fears")
+tag = Tag.create!(name: "Life Milestones")
+tag = Tag.create!(name: "Travel")
+tag = Tag.create!(name: "Especially Weird")
+tag = Tag.create!(name: "Nothing to It")
 
 user_experience = UserExperience.create!(user_id: "2", experience_id: "1")
 user_experience = UserExperience.create!(user_id: "2", experience_id: "2")
