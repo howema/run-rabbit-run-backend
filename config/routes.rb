@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   delete "experiences/:id" => "experiences#destroy"
 
   get "/tags" => "tags#index"
+
+  post "/users" => "users#create"
+
+  patch "/users/:id" => "users#update"
 end
