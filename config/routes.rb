@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
-  get "/experience-tags" => "experience_tags#index"
+  post "/experience-tags" => "experience_tags#create"
 
-  get "/experience-tags/:id" => "experience_tags#show"
+  delete "/experience-tags/:id" => "experience_tags#destroy"
 end
