@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   patch "experiences/:id" => "experiences#update"
 
   delete "experiences/:id" => "experiences#destroy"
+
+  get "/tags" => "tags#index"
 end
