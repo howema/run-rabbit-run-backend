@@ -6,7 +6,7 @@ class ExperiencesController < ApplicationController
 
   def show
     experience = Experience.find_by(id: params[:id])
-    render json: experience.as_json
+    render json: experience
   end
 
   def create
@@ -17,7 +17,7 @@ class ExperiencesController < ApplicationController
     )
 
     experience.save
-    render json: experience.as_json
+    render json: experience
   end
 
   def update
@@ -26,7 +26,7 @@ class ExperiencesController < ApplicationController
     experience.subtasks = params[:subtasks] || experience.subtasks
     experience.notes = params[:notes] || experience.notes
     experience.save
-    render json: experience.as_json
+    render json: experience
   end
 
   def destroy
