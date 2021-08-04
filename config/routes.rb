@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get "/tags" => "tags#index"
 
+  get "/tags/:id" => "tags#show"
+
   post "/users" => "users#create"
 
   patch "/users/:id" => "users#update"
