@@ -14,6 +14,7 @@ class ExperiencesController < ApplicationController
       title: params[:title],
       subtasks: params[:subtasks],
       notes: params[:notes],
+      image: params[:image],
     )
 
     experience.save
@@ -25,6 +26,7 @@ class ExperiencesController < ApplicationController
     experience.title = params[:title] || experience.title
     experience.subtasks = params[:subtasks] || experience.subtasks
     experience.notes = params[:notes] || experience.notes
+    experience.image = params[:image] || experience.image
     experience.save
     render json: experience
   end
