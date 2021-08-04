@@ -5,7 +5,7 @@ class ExperienceTagsController < ApplicationController
       tag_id: params[:tag_id],
     )
     experience_tag.save
-    render json: experience_tag.as_json
+    render json: experience_tag
   end
 
   def destroy
@@ -16,10 +16,13 @@ class ExperienceTagsController < ApplicationController
 
   # def index
   #   experience_tag = ExperienceTag.all
+  #   render json: experience_tag
   # end
 
-  def show
-    experience_tag = ExperienceTag.find_by(id: params[:id])
-    render json: experience_tag.as_json
-  end
+  # def show
+  #   experience_tag = ExperienceTag.find_by(id: params[:id])
+  #   render json: experience_tag
+  # end
+
+  #^prob dont need these
 end
