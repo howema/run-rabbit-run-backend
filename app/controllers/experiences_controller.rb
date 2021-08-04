@@ -1,7 +1,7 @@
 class ExperiencesController < ApplicationController
   def index
     experiences = Experience.all
-    render json: experiences.as_json
+    render json: experiences
   end
 
   def show
