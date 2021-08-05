@@ -17,8 +17,13 @@ class ExperiencesController < ApplicationController
       image: params[:image],
     )
 
-    experience.save
-    render json: experience
+    if experience.save
+      render "Experience successfully created"
+    else
+      render json: { errors: experience.errors.full_messages }, status: :bad_request
+    end
+    # experience.save
+    # render json: experience
   end
 
   def update
@@ -27,8 +32,14 @@ class ExperiencesController < ApplicationController
     experience.subtasks = params[:subtasks] || experience.subtasks
     experience.notes = params[:notes] || experience.notes
     experience.image = params[:image] || experience.image
-    experience.save
-    render json: experience
+
+    if experience.save
+      render "Experience successfully updated"
+    else
+      render json: { errors: experience.errors.full_messages }, status: :bad_request
+    end
+    # experience.save
+    # render json: experience
   end
 
   def destroy
