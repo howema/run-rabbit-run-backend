@@ -13,16 +13,4 @@ class ExperienceTagsController < ApplicationController
     experience_tag.destroy
     render json: { message: "It's gone now. Either you achieved it or you gave up. Congrats!" }
   end
-
-  # def index
-  #   experience_tag = ExperienceTag.all
-  #   render json: experience_tag
-  # end
-
-  # def show
-  #   experience_tag = ExperienceTag.find_by(id: params[:id])
-  #   render json: experience_tag
-  # end
-
-  #^prob dont need these
 end
