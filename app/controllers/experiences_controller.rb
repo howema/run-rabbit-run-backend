@@ -1,6 +1,6 @@
 class ExperiencesController < ApplicationController
   def index
-    experiences = Experience.all
+    experiences = Experience.where(user_id: current_user.id)
     render json: experiences
   end
 
@@ -15,15 +15,14 @@ class ExperiencesController < ApplicationController
       subtasks: params[:subtasks],
       notes: params[:notes],
       image: params[:image],
+      user_id: current_user.id,
     )
 
     if experience.save
-      render "Experience successfully created"
+      render json: { message: "Experience successfully created" }
     else
       render json: { errors: experience.errors.full_messages }, status: :bad_request
     end
-    # experience.save
-    # render json: experience
   end
 
   def update
@@ -34,12 +33,10 @@ class ExperiencesController < ApplicationController
     experience.image = params[:image] || experience.image
 
     if experience.save
-      render "Experience successfully updated"
+      render json: { message: "Experience successfully updated" }
     else
       render json: { errors: experience.errors.full_messages }, status: :bad_request
     end
-    # experience.save
-    # render json: experience
   end
 
   def destroy
