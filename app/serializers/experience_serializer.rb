@@ -1,5 +1,5 @@
 class ExperienceSerializer < ActiveModel::Serializer
-  attributes :id, :title, :subtasks, :notes, :image, :user_id
+  attributes :id, :title, :subtasks, :notes, :image, :user_id, :complete
 
   has_many :experience_tags
   belongs_to :user

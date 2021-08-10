@@ -16,6 +16,7 @@ class ExperiencesController < ApplicationController
       notes: params[:notes],
       image: params[:image],
       user_id: current_user.id,
+      completed: false,
     )
 
     if experience.save
@@ -31,6 +32,7 @@ class ExperiencesController < ApplicationController
     experience.subtasks = params[:subtasks] || experience.subtasks
     experience.notes = params[:notes] || experience.notes
     experience.image = params[:image] || experience.image
+    experience.completed = params[:completed] || experience.completed
 
     if experience.save
       render json: { message: "Experience successfully updated" }
