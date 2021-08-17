@@ -18,4 +18,9 @@ class ExperienceTagsController < ApplicationController
     experience_tag = ExperienceTag.find_by(id: params[:id])
     render json: experience_tag
   end
+
+  def index
+    experience_tag = ExperienceTag.all
+    render json: experience_tag
+  end
 end

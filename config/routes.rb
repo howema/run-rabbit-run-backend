@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   delete "/experience-tags/:id" => "experience_tags#destroy"
 
-  # get "/experience-tags" => "experience_tags#index"
+  get "/experience-tags" => "experience_tags#index"
 
   get "/experience-tags/:id" => "experience_tags#show"
 end
