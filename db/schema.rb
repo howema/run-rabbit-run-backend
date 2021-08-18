@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_10_001021) do
+ActiveRecord::Schema.define(version: 2021_08_18_204109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,9 @@ ActiveRecord::Schema.define(version: 2021_08_10_001021) do
     t.integer "user_id"
     t.string "image"
     t.boolean "complete"
+    t.string "task1"
+    t.string "task2"
+    t.string "task3"
   end
 
   create_table "tags", force: :cascade do |t|
