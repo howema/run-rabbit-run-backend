@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_20_184452) do
+ActiveRecord::Schema.define(version: 2021_08_20_191742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2021_08_20_184452) do
     t.string "task2"
     t.string "task3"
     t.string "timeline"
-    t.integer "budget"
     t.string "travel_type"
     t.string "task1a"
     t.string "task1b"
@@ -56,6 +55,7 @@ ActiveRecord::Schema.define(version: 2021_08_20_184452) do
     t.string "task3a"
     t.string "task3b"
     t.string "task3c"
+    t.string "budget"
   end
 
   create_table "tags", force: :cascade do |t|

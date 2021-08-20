@@ -19,7 +19,7 @@ class ExperiencesController < ApplicationController
       image: params[:image],
       budget: params[:budget],
       timeline: params[:timeline],
-      # travel_type: params[:travel_type],
+      travel_type: params[:travel_type],
       task1a: params[:task1a],
       task1b: params[:task1b],
       task1c: params[:task1c],
