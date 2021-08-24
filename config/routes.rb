@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "/experiences" => "experiences#index"
+  get "/experiences-true" => "experiences#index_true"
 
   get "/experiences/:id" => "experiences#show"
 

@@ -1,6 +1,11 @@
 class ExperiencesController < ApplicationController
   def index
-    experiences = Experience.where(user_id: current_user.id)
+    experiences = Experience.where(user_id: current_user.id, complete: false)
+    render json: experiences
+  end
+
+  def index_true
+    experiences = Experience.where(user_id: current_user.id, complete: true)
     render json: experiences
   end
 
